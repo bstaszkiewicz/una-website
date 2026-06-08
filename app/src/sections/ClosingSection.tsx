@@ -122,15 +122,15 @@ export default function ClosingSection() {
       <div className="mt-16 flex flex-col sm:flex-row items-center gap-4">
         <a
           href="mailto:contact@una.energy"
-          className="inline-flex items-center px-8 py-4 rounded-button font-medium transition-all duration-250 hover:shadow-[0_0_20px_rgba(255,195,0,0.25)]"
-          style={{ backgroundColor: 'var(--amber-light)', color: 'var(--navy-base)' }}
+          className="inline-flex items-center px-8 py-4 rounded-button font-medium transition-all duration-250 hover:shadow-[0_0_20px_rgba(196,220,106,0.25)]"
+          style={{ backgroundColor: 'var(--lime)', color: 'var(--navy-base)' }}
         >
           Porozmawiajmy
         </a>
         <a
           href="mailto:contact@una.energy"
-          className="inline-flex items-center px-8 py-4 rounded-button font-medium border transition-all duration-250 hover:border-teal-accent hover:bg-teal-accent/10"
-          style={{ borderColor: 'var(--teal-muted)', color: 'var(--offwhite)' }}
+          className="inline-flex items-center px-8 py-4 rounded-button font-medium border transition-all duration-250 hover:border-cyan-accent hover:bg-cyan-accent/10"
+          style={{ borderColor: 'var(--cyan-muted)', color: 'var(--offwhite)' }}
         >
           contact@una.energy
         </a>

@@ -60,7 +60,7 @@ export default function HeroSection() {
             <div
               className="h-full rounded-full"
               style={{
-                backgroundColor: 'var(--amber-light)',
+                backgroundColor: 'var(--lime)',
                 animation: 'loadingLine 2s ease-in-out forwards',
               }}
             />
@@ -123,13 +123,13 @@ export default function HeroSection() {
                   e.preventDefault();
                   document.querySelector('#closing')?.scrollIntoView({ behavior: 'smooth' });
                 }}
-                className="inline-flex items-center px-8 py-4 rounded-button font-medium transition-all duration-250 hover:shadow-[0_0_20px_rgba(255,195,0,0.25)]"
-                style={{ backgroundColor: 'var(--amber-light)', color: 'var(--navy-base)' }}
+                className="inline-flex items-center px-8 py-4 rounded-button font-medium transition-all duration-250 hover:shadow-[0_0_20px_rgba(196,220,106,0.25)]"
+                style={{ backgroundColor: 'var(--lime)', color: 'var(--navy-base)' }}
                 onMouseEnter={(e) => {
-                  (e.target as HTMLElement).style.backgroundColor = 'var(--amber-deep)';
+                  (e.target as HTMLElement).style.backgroundColor = 'var(--lime-deep)';
                 }}
                 onMouseLeave={(e) => {
-                  (e.target as HTMLElement).style.backgroundColor = 'var(--amber-light)';
+                  (e.target as HTMLElement).style.backgroundColor = 'var(--lime)';
                 }}
               >
                 Porozmawiajmy
@@ -147,7 +147,7 @@ export default function HeroSection() {
         <div
           className="w-12 h-12 flex items-center justify-center transition-all duration-300 hover:scale-110"
           style={{
-            border: '1px solid var(--teal-muted)',
+            border: '1px solid var(--cyan-muted)',
             backgroundColor: 'rgba(20, 33, 61, 0.6)',
           }}
         >

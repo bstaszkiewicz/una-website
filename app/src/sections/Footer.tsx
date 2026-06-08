@@ -12,14 +12,14 @@ export default function Footer() {
       className="w-full"
       style={{
         backgroundColor: 'var(--navy-deep)',
-        borderTop: '1px solid var(--teal-muted)',
+        borderTop: '1px solid var(--cyan-muted)',
       }}
     >
       <div className="content-max-width pt-16 pb-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           {/* Brand */}
           <div>
-            <div className="text-h2 font-medium text-offwhite mb-3">UNA</div>
+            <img src="/images/logo/una-mark-light.png" alt="UNA" style={{ height: 30, width: 'auto', display: 'block', marginBottom: 12 }} />
             <p className="text-body text-offwhite/50">
               Brakująca warstwa rozliczeń energetycznych
             </p>
@@ -72,7 +72,7 @@ export default function Footer() {
               <a
                 href="mailto:contact@una.energy"
                 className="block text-body transition-colors duration-200 hover:underline"
-                style={{ color: 'var(--teal-accent)' }}
+                style={{ color: 'var(--cyan-accent)' }}
               >
                 contact@una.energy
               </a>
@@ -81,11 +81,11 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block text-body transition-colors duration-200"
-                style={{ color: 'var(--teal-accent)' }}
+                style={{ color: 'var(--cyan-accent)' }}
               >
                 una.energy
               </a>
-              <div className="mt-3 pt-3 space-y-1" style={{ borderTop: '1px solid var(--teal-muted)' }}>
+              <div className="mt-3 pt-3 space-y-1" style={{ borderTop: '1px solid var(--cyan-muted)' }}>
                 <p className="text-mono text-offwhite/40 text-xs">Magdalena Sokalska</p>
                 <p className="text-mono text-offwhite/40 text-xs">Co-founder · Biznes & Regulacje</p>
               </div>
@@ -95,10 +95,10 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-4 mt-4">
                 <a
-                  href="https://x.com"
+                  href="https://x.com/UNA_ENERGY"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-offwhite/50 hover:text-teal-accent transition-colors duration-200"
+                  className="text-offwhite/50 hover:text-cyan-accent transition-colors duration-200"
                   aria-label="X / Twitter"
                 >
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
@@ -106,10 +106,10 @@ export default function Footer() {
                   </svg>
                 </a>
                 <a
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/company/una-energy/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-offwhite/50 hover:text-teal-accent transition-colors duration-200"
+                  className="text-offwhite/50 hover:text-cyan-accent transition-colors duration-200"
                   aria-label="LinkedIn"
                 >
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
@@ -122,42 +122,23 @@ export default function Footer() {
         </div>
 
         {/* Dane rejestrowe */}
-        <div
-          className="mb-10 p-6 rounded-card"
-          style={{
-            backgroundColor: 'var(--navy-mid)',
-            border: '1px solid var(--teal-muted)',
-          }}
-        >
-          <h4 className="text-h3 text-offwhite/80 mb-4">Dane rejestrowe</h4>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-3">
+        <div className="mb-10">
+          <div style={{ display: 'flex', gap: 20, alignItems: 'flex-start' }}>
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--lime)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0, marginTop: 2 }}>
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="16" y1="13" x2="8" y2="13" /><line x1="16" y1="17" x2="8" y2="17" /><polyline points="10 9 9 9 8 9" />
+            </svg>
             <div>
-              <span className="font-mono text-mono text-offwhite/40 block">KRS</span>
-              <span className="text-body text-offwhite/70">0001243222</span>
-            </div>
-            <div>
-              <span className="font-mono text-mono text-offwhite/40 block">REGON</span>
-              <span className="text-body text-offwhite/70">54484719800000</span>
-            </div>
-            <div>
-              <span className="font-mono text-mono text-offwhite/40 block">NIP</span>
-              <span className="text-body text-offwhite/70">8133952850</span>
-            </div>
-            <div>
-              <span className="font-mono text-mono text-offwhite/40 block">Oficjalna nazwa</span>
-              <span className="text-body text-offwhite/70">UNA ENERGY</span>
-            </div>
-            <div className="sm:col-span-2">
-              <span className="font-mono text-mono text-offwhite/40 block">Adres rejestracji</span>
-              <span className="text-body text-offwhite/70">UL. STANISŁAWA MONIUSZKI 11, PL-35-015, RZESZÓW</span>
-            </div>
-            <div>
-              <span className="font-mono text-mono text-offwhite/40 block">Data rejestracji KRS</span>
-              <span className="text-body text-offwhite/70">2026-05-26</span>
-            </div>
-            <div>
-              <span className="font-mono text-mono text-offwhite/40 block">Forma prawna</span>
-              <span className="text-body text-offwhite/70">Prosta spółka akcyjna</span>
+              <p className="text-h3 text-offwhite font-semibold mb-4">UNA Energy P.S.A.</p>
+              <div style={{ display: 'grid', gridTemplateColumns: 'auto 1fr', columnGap: 40, rowGap: 12, maxWidth: 420 }}>
+                <span className="font-mono text-mono text-offwhite/40">ADRES</span>
+                <span className="text-body text-offwhite/70">ul. Stanisława Moniuszki 11<br />PL-35-015, Rzeszów</span>
+                <span className="font-mono text-mono text-offwhite/40">KRS</span>
+                <span className="text-body text-offwhite/70">0001243222</span>
+                <span className="font-mono text-mono text-offwhite/40">NIP</span>
+                <span className="text-body text-offwhite/70">8133952850</span>
+                <span className="font-mono text-mono text-offwhite/40">REGON</span>
+                <span className="text-body text-offwhite/70">54484719800000</span>
+              </div>
             </div>
           </div>
         </div>
@@ -165,7 +146,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div
           className="flex flex-col sm:flex-row items-center justify-between pt-8 gap-4"
-          style={{ borderTop: '1px solid var(--teal-muted)' }}
+          style={{ borderTop: '1px solid var(--cyan-muted)' }}
         >
           <p className="text-sm text-offwhite/30">
             &copy; 2026 UNA. Wszelkie prawa zastrzeżone.

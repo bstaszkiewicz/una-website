@@ -36,15 +36,15 @@ export default function CTABanner() {
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div
           className="absolute top-0 left-1/4 w-px h-full"
-          style={{ background: 'linear-gradient(to bottom, transparent, rgba(0,180,216,0.08), transparent)' }}
+          style={{ background: 'linear-gradient(to bottom, transparent, rgba(8,174,234,0.08), transparent)' }}
         />
         <div
           className="absolute top-0 right-1/3 w-px h-full"
-          style={{ background: 'linear-gradient(to bottom, transparent, rgba(255,195,0,0.06), transparent)' }}
+          style={{ background: 'linear-gradient(to bottom, transparent, rgba(196,220,106,0.06), transparent)' }}
         />
         <div
           className="absolute top-1/3 left-0 w-full h-px"
-          style={{ background: 'linear-gradient(to right, transparent, rgba(0,180,216,0.05), transparent)' }}
+          style={{ background: 'linear-gradient(to right, transparent, rgba(8,174,234,0.05), transparent)' }}
         />
       </div>
 
@@ -60,8 +60,8 @@ export default function CTABanner() {
         <div className="cta-animate flex flex-col sm:flex-row items-center justify-center gap-4">
           <a
             href="mailto:contact@una.energy"
-            className="inline-flex items-center gap-3 px-8 py-4 font-medium transition-all duration-300 hover:gap-5 hover:shadow-[0_0_30px_rgba(255,195,0,0.25)]"
-            style={{ backgroundColor: 'var(--amber-light)', color: 'var(--navy-base)' }}
+            className="inline-flex items-center gap-3 px-8 py-4 font-medium transition-all duration-300 hover:gap-5 hover:shadow-[0_0_30px_rgba(196,220,106,0.25)]"
+            style={{ backgroundColor: 'var(--lime)', color: 'var(--navy-base)' }}
           >
             <span>Porozmawiajmy</span>
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -70,8 +70,8 @@ export default function CTABanner() {
           </a>
           <a
             href="mailto:contact@una.energy"
-            className="inline-flex items-center px-8 py-4 font-medium border transition-all duration-300 hover:border-teal-accent hover:bg-teal-accent/5"
-            style={{ borderColor: 'var(--teal-muted)', color: 'var(--offwhite)' }}
+            className="inline-flex items-center px-8 py-4 font-medium border transition-all duration-300 hover:border-cyan-accent hover:bg-cyan-accent/5"
+            style={{ borderColor: 'var(--cyan-muted)', color: 'var(--offwhite)' }}
           >
             contact@una.energy
           </a>

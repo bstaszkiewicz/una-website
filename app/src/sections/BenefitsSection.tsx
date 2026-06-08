@@ -64,14 +64,14 @@ export default function BenefitsSection() {
       className="w-full section-padding"
       style={{
         backgroundColor: 'var(--navy-base)',
-        borderTop: '1px solid rgba(0, 180, 216, 0.12)',
+        borderTop: '1px solid rgba(8, 174, 234, 0.12)',
       }}
     >
       <div className="content-max-width">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
           {/* Left: sticky heading */}
           <div className="lg:sticky lg:top-32 lg:self-start">
-            <div className="eyebrow mb-6 benefit-animate" style={{ color: 'var(--teal-accent)' }}>
+            <div className="eyebrow mb-6 benefit-animate" style={{ color: 'var(--cyan-accent)' }}>
               KORZYŚCI
             </div>
             <h2 className="text-h1 text-offwhite benefit-animate">
@@ -88,15 +88,15 @@ export default function BenefitsSection() {
                   key={i}
                   className="benefit-animate py-8"
                   style={{
-                    borderBottom: i < benefits.length - 1 ? '1px solid rgba(0, 180, 216, 0.12)' : 'none',
+                    borderBottom: i < benefits.length - 1 ? '1px solid rgba(8, 174, 234, 0.12)' : 'none',
                   }}
                 >
                   <div className="flex items-start gap-5">
                     <div
                       className="flex-shrink-0 w-10 h-10 rounded-card flex items-center justify-center"
-                      style={{ backgroundColor: 'rgba(0, 180, 216, 0.1)' }}
+                      style={{ backgroundColor: 'rgba(8, 174, 234, 0.1)' }}
                     >
-                      <Icon size={20} style={{ color: 'var(--teal-accent)' }} strokeWidth={1.5} />
+                      <Icon size={20} style={{ color: 'var(--cyan-accent)' }} strokeWidth={1.5} />
                     </div>
                     <div>
                       <h3 className="text-h3 text-offwhite mb-2">{benefit.title}</h3>

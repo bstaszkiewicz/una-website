@@ -57,9 +57,9 @@ export default function PartnersSection() {
           {placeholderLogos.map((name, i) => (
             <div
               key={i}
-              className="partner-animate flex items-center justify-center h-20 rounded-card transition-all duration-300 hover:border-teal-accent/40 hover:bg-navy-mid"
+              className="partner-animate flex items-center justify-center h-20 rounded-card transition-all duration-300 hover:border-cyan-accent/40 hover:bg-navy-mid"
               style={{
-                border: '1px dashed var(--teal-muted)',
+                border: '1px dashed var(--cyan-muted)',
               }}
             >
               <span className="font-mono text-mono text-offwhite/30">{name}</span>
@@ -77,7 +77,7 @@ export default function PartnersSection() {
               key={i}
               className="partner-animate flex-shrink-0 flex items-center justify-center w-40 h-20 rounded-card snap-start"
               style={{
-                border: '1px dashed var(--teal-muted)',
+                border: '1px dashed var(--cyan-muted)',
               }}
             >
               <span className="font-mono text-mono text-offwhite/30">{name}</span>
@@ -87,7 +87,7 @@ export default function PartnersSection() {
 
         <div
           className="partner-animate w-full h-px mb-8"
-          style={{ backgroundColor: 'var(--teal-muted)' }}
+          style={{ backgroundColor: 'var(--cyan-muted)' }}
         />
 
         <p className="partner-animate text-body text-offwhite/50 text-center max-w-[600px] mx-auto">

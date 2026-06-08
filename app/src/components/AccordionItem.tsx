@@ -30,7 +30,7 @@ export default function AccordionItem({ tags, title, children, defaultOpen = fal
     <div
       className="group"
       style={{
-        borderTop: '1px solid rgba(0, 180, 216, 0.12)',
+        borderTop: '1px solid rgba(8, 174, 234, 0.12)',
       }}
     >
       <button
@@ -42,7 +42,7 @@ export default function AccordionItem({ tags, title, children, defaultOpen = fal
           <div className="flex items-center gap-3 mb-4">
             {tags.map((tag, i) => (
               <span key={i} className="flex items-center gap-3">
-                <span className="eyebrow" style={{ color: 'var(--teal-accent)', opacity: 0.7 }}>
+                <span className="eyebrow" style={{ color: 'var(--cyan-accent)', opacity: 0.7 }}>
                   {tag}
                 </span>
                 {i < tags.length - 1 && (
@@ -63,8 +63,8 @@ export default function AccordionItem({ tags, title, children, defaultOpen = fal
         <div
           className="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 flex items-center justify-center transition-all duration-300 mt-1"
           style={{
-            backgroundColor: isOpen ? 'var(--amber-light)' : 'transparent',
-            border: isOpen ? '1px solid var(--amber-light)' : '1px solid var(--teal-muted)',
+            backgroundColor: isOpen ? 'var(--lime)' : 'transparent',
+            border: isOpen ? '1px solid var(--lime)' : '1px solid var(--cyan-muted)',
           }}
         >
           {isOpen ? (

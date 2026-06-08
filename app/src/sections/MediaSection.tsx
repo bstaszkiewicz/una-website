@@ -5,19 +5,12 @@ import { FileText } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const tabs = ['Publikacje', 'Baza wiedzy', 'W mediach', 'Newsletter'];
+const tabs = ['Publikacje', 'W mediach', 'Newsletter'];
 
 const publications = [
   { title: 'Przyszłość rozliczeń energetycznych w przemyśle', date: '2026-05-15' },
   { title: 'Jak połączyć dane z 5 systemów w jeden model', date: '2026-04-22' },
   { title: 'Real-time settlement: od teorii do praktyki', date: '2026-03-10' },
-];
-
-const knowledgeBase = [
-  { title: 'Architektura UNA — 9 modułów', description: 'Szczegółowy opis architektury platformy' },
-  { title: 'Wdrożenie Tryb 1: Główny billing', description: 'Przewodnik po wdrożeniu UNA jako głównego systemu' },
-  { title: 'Integracja z EMS/SCADA', description: 'Jak połączyć UNA z istniejącymi systemami pomiarowymi' },
-  { title: 'Raportowanie ESG i audyt', description: 'Generowanie raportów regulacyjnych i śladu audytowego' },
 ];
 
 const pressMentions = [
@@ -64,10 +57,10 @@ export default function MediaSection() {
       <div className="content-max-width">
         <div className="eyebrow mb-6 media-animate">MEDIA I PUBLIKACJE</div>
 
-        <h2 className="text-h1 text-offwhite mb-10 media-animate">Baza wiedzy</h2>
+        <h2 className="text-h1 text-offwhite mb-10 media-animate">Publikacje i media</h2>
 
         {/* Tabs */}
-        <div className="flex flex-wrap gap-6 mb-12 border-b media-animate" style={{ borderColor: 'var(--teal-muted)' }}>
+        <div className="flex flex-wrap gap-6 mb-12 border-b media-animate" style={{ borderColor: 'var(--cyan-muted)' }}>
           {tabs.map((tab, i) => (
             <button
               key={i}
@@ -76,7 +69,7 @@ export default function MediaSection() {
               style={{
                 color: activeTab === i ? 'var(--offwhite)' : 'var(--offwhite)',
                 opacity: activeTab === i ? 1 : 0.4,
-                borderBottom: activeTab === i ? '2px solid var(--amber-light)' : '2px solid transparent',
+                borderBottom: activeTab === i ? '2px solid var(--lime)' : '2px solid transparent',
               }}
             >
               {tab}
@@ -101,36 +94,13 @@ export default function MediaSection() {
                     className="aspect-video rounded-t-card mb-4 flex items-center justify-center"
                     style={{ backgroundColor: 'var(--navy-mid)' }}
                   >
-                    <FileText size={32} style={{ color: 'var(--teal-accent)', opacity: 0.5 }} />
+                    <FileText size={32} style={{ color: 'var(--cyan-accent)', opacity: 0.5 }} />
                   </div>
-                  <h3 className="text-h3 text-offwhite mb-2 line-clamp-2 group-hover:text-teal-accent transition-colors">
+                  <h3 className="text-h3 text-offwhite mb-2 line-clamp-2 group-hover:text-cyan-accent transition-colors">
                     {pub.title}
                   </h3>
-                  <span className="font-mono text-mono" style={{ color: 'var(--teal-accent)' }}>
+                  <span className="font-mono text-mono" style={{ color: 'var(--cyan-accent)' }}>
                     {pub.date}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Baza wiedzy */}
-          <div
-            className="transition-opacity duration-300"
-            style={{ opacity: activeTab === 1 ? 1 : 0, pointerEvents: activeTab === 1 ? 'auto' : 'none', position: activeTab === 1 ? 'relative' : 'absolute', top: 0, left: 0, right: 0 }}
-          >
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {knowledgeBase.map((item, i) => (
-                <div
-                  key={i}
-                  className="p-6 rounded-card transition-all duration-300 hover:-translate-y-1 cursor-pointer"
-                  style={{ backgroundColor: 'var(--navy-mid)' }}
-                >
-                  <FileText size={32} style={{ color: 'var(--teal-accent)' }} className="mb-4" />
-                  <h3 className="text-h3 text-offwhite mb-2">{item.title}</h3>
-                  <p className="text-body text-offwhite/60">{item.description}</p>
-                  <span className="inline-block mt-4 text-teal-accent hover:underline text-body">
-                    Pobierz
                   </span>
                 </div>
               ))}
@@ -140,7 +110,7 @@ export default function MediaSection() {
           {/* W mediach */}
           <div
             className="transition-opacity duration-300"
-            style={{ opacity: activeTab === 2 ? 1 : 0, pointerEvents: activeTab === 2 ? 'auto' : 'none', position: activeTab === 2 ? 'relative' : 'absolute', top: 0, left: 0, right: 0 }}
+            style={{ opacity: activeTab === 1 ? 1 : 0, pointerEvents: activeTab === 1 ? 'auto' : 'none', position: activeTab === 1 ? 'relative' : 'absolute', top: 0, left: 0, right: 0 }}
           >
             <div className="space-y-0">
               {pressMentions.map((mention, i) => (
@@ -148,10 +118,10 @@ export default function MediaSection() {
                   key={i}
                   className="py-6"
                   style={{
-                    borderBottom: i < pressMentions.length - 1 ? '1px solid var(--teal-muted)' : 'none',
+                    borderBottom: i < pressMentions.length - 1 ? '1px solid var(--cyan-muted)' : 'none',
                   }}
                 >
-                  <span className="font-mono text-mono block mb-2" style={{ color: 'var(--teal-accent)' }}>
+                  <span className="font-mono text-mono block mb-2" style={{ color: 'var(--cyan-accent)' }}>
                     {mention.publication}
                   </span>
                   <h3 className="text-h3 text-offwhite mb-1">{mention.title}</h3>
@@ -164,7 +134,7 @@ export default function MediaSection() {
           {/* Newsletter */}
           <div
             className="transition-opacity duration-300"
-            style={{ opacity: activeTab === 3 ? 1 : 0, pointerEvents: activeTab === 3 ? 'auto' : 'none', position: activeTab === 3 ? 'relative' : 'absolute', top: 0, left: 0, right: 0 }}
+            style={{ opacity: activeTab === 2 ? 1 : 0, pointerEvents: activeTab === 2 ? 'auto' : 'none', position: activeTab === 2 ? 'relative' : 'absolute', top: 0, left: 0, right: 0 }}
           >
             <div className="max-w-md mx-auto text-center">
               <h3 className="text-h2 text-offwhite mb-4">Bądź na bieżąco</h3>
@@ -178,17 +148,17 @@ export default function MediaSection() {
                 <input
                   type="email"
                   placeholder="Twój adres e-mail"
-                  className="flex-1 px-4 py-3 rounded-button text-offwhite outline-none transition-colors duration-200 focus:border-teal-accent"
+                  className="flex-1 px-4 py-3 rounded-button text-offwhite outline-none transition-colors duration-200 focus:border-cyan-accent"
                   style={{
                     backgroundColor: 'var(--navy-mid)',
-                    border: '1px solid var(--teal-muted)',
+                    border: '1px solid var(--cyan-muted)',
                   }}
                 />
                 <button
                   type="submit"
-                  className="px-8 py-3 rounded-button font-medium transition-all duration-250 hover:shadow-[0_0_20px_rgba(255,195,0,0.25)]"
+                  className="px-8 py-3 rounded-button font-medium transition-all duration-250 hover:shadow-[0_0_20px_rgba(196,220,106,0.25)]"
                   style={{
-                    backgroundColor: 'var(--amber-light)',
+                    backgroundColor: 'var(--lime)',
                     color: 'var(--navy-base)',
                   }}
                 >

@@ -134,10 +134,10 @@ export default function AuraCanvas({ onReady }: AuraCanvasProps) {
       fragmentShader,
       uniforms: {
         uTime: { value: 0 },
-        uColor1: { value: new THREE.Vector4(0.0, 0.29, 0.71, 1.0) },
-        uColor2: { value: new THREE.Vector4(0.0, 0.71, 0.85, 1.0) },
-        uColor3: { value: new THREE.Vector4(1.0, 0.62, 0.0, 1.0) },
-        uColor4: { value: new THREE.Vector4(1.0, 0.76, 0.0, 1.0) },
+        uColor1: { value: new THREE.Vector4(0.03, 0.68, 0.92, 1.0) },
+        uColor2: { value: new THREE.Vector4(0.03, 0.52, 0.71, 1.0) },
+        uColor3: { value: new THREE.Vector4(0.77, 0.86, 0.42, 1.0) },
+        uColor4: { value: new THREE.Vector4(0.68, 0.78, 0.39, 1.0) },
         uResolution: { value: new THREE.Vector2(window.innerWidth, window.innerHeight) },
         uMouse: { value: new THREE.Vector2(0, 0) },
       },
@@ -155,7 +155,7 @@ export default function AuraCanvas({ onReady }: AuraCanvasProps) {
 
     const dotGeometry = new THREE.CircleGeometry(0.04, 8);
     const dotMaterial = new THREE.MeshBasicMaterial({
-      color: 0x0077b6,
+      color: 0x0784B4,
       transparent: true,
       opacity: 0.4,
     });

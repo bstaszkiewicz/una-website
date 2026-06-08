@@ -64,9 +64,8 @@ export default function Navigation() {
               e.preventDefault();
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
-            className="text-h3 font-medium text-offwhite tracking-tight"
           >
-            UNA
+            <img src="/images/logo/una-mark-light.png" alt="UNA" style={{ height: 26, width: 'auto', display: 'block' }} />
           </a>
 
           {/* Center nav - desktop */}
@@ -94,8 +93,8 @@ export default function Navigation() {
               <button
                 className="px-2 py-1 text-label font-medium transition-colors duration-200"
                 style={{
-                  color: 'var(--amber-light)',
-                  backgroundColor: 'rgba(255, 195, 0, 0.1)',
+                  color: 'var(--lime)',
+                  backgroundColor: 'rgba(196, 220, 106, 0.1)',
                   borderRadius: '4px',
                 }}
               >
@@ -118,7 +117,7 @@ export default function Navigation() {
             {/* Divider */}
             <div
               className="hidden md:block w-px h-6 mr-1"
-              style={{ backgroundColor: 'var(--teal-muted)' }}
+              style={{ backgroundColor: 'var(--cyan-muted)' }}
             />
 
             {/* Right CTA */}
@@ -131,7 +130,7 @@ export default function Navigation() {
               }}
               className="hidden md:inline-flex items-center px-6 py-3 rounded-button font-medium transition-all duration-300"
               style={{
-                backgroundColor: !heroPassed ? 'var(--amber-light)' : 'transparent',
+                backgroundColor: !heroPassed ? 'var(--lime)' : 'transparent',
                 color: !heroPassed ? 'var(--navy-base)' : 'transparent',
                 opacity: !heroPassed ? 1 : 0,
                 transform: !heroPassed ? 'translateY(0)' : 'translateY(-100%)',
@@ -150,7 +149,7 @@ export default function Navigation() {
               }}
               className="hidden md:inline-flex items-center px-4 py-2 rounded-pill font-medium text-label transition-all duration-300"
               style={{
-                backgroundColor: 'var(--amber-light)',
+                backgroundColor: 'var(--lime)',
                 color: 'var(--navy-base)',
                 opacity: heroPassed ? 1 : 0,
                 transform: heroPassed ? 'translateY(0)' : 'translateY(-100%)',
@@ -188,7 +187,7 @@ export default function Navigation() {
                 e.preventDefault();
                 scrollTo(link.href);
               }}
-              className="mobile-link text-h2 text-offwhite hover:text-teal-accent transition-colors"
+              className="mobile-link text-h2 text-offwhite hover:text-cyan-accent transition-colors"
             >
               {link.label}
             </a>
@@ -199,7 +198,7 @@ export default function Navigation() {
               e.preventDefault();
               scrollTo('#closing');
             }}
-            className="mobile-link mt-4 text-body-lg text-amber-light hover:text-amber-deep transition-colors"
+            className="mobile-link mt-4 text-body-lg text-lime hover:text-lime-deep transition-colors"
           >
             Porozmawiajmy
           </a>

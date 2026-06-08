@@ -84,20 +84,20 @@ export default function WhyNowSection() {
                 className="whynow-animate p-6 rounded-card transition-all duration-300 hover:-translate-y-1 group"
                 style={{
                   backgroundColor: 'var(--navy-mid)',
-                  borderTop: '2px solid var(--teal-deep)',
+                  borderTop: '2px solid var(--cyan-deep)',
                 }}
               >
                 <div className="flex items-center justify-between mb-4">
                   <span
                     className="font-mono text-mono"
-                    style={{ color: 'var(--amber-light)', opacity: 0.6 }}
+                    style={{ color: 'var(--lime)', opacity: 0.6 }}
                   >
                     {driver.num}
                   </span>
                   <Icon
                     size={24}
                     strokeWidth={1.5}
-                    style={{ color: 'var(--teal-accent)', opacity: 0.5 }}
+                    style={{ color: 'var(--cyan-accent)', opacity: 0.5 }}
                     className="group-hover:opacity-100 transition-opacity"
                   />
                 </div>

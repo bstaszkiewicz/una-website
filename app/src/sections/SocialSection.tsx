@@ -47,10 +47,10 @@ export default function SocialSection() {
             href="https://x.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="social-animate inline-flex items-center px-6 py-3 rounded-pill border transition-all duration-250 hover:border-teal-accent hover:bg-teal-accent/10"
+            className="social-animate inline-flex items-center px-6 py-3 rounded-pill border transition-all duration-250 hover:border-cyan-accent hover:bg-cyan-accent/10"
             style={{
               backgroundColor: 'var(--navy-mid)',
-              borderColor: 'var(--teal-muted)',
+              borderColor: 'var(--cyan-muted)',
               color: 'var(--offwhite)',
             }}
           >
@@ -60,10 +60,10 @@ export default function SocialSection() {
             href="https://linkedin.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="social-animate inline-flex items-center px-6 py-3 rounded-pill border transition-all duration-250 hover:border-teal-accent hover:bg-teal-accent/10"
+            className="social-animate inline-flex items-center px-6 py-3 rounded-pill border transition-all duration-250 hover:border-cyan-accent hover:bg-cyan-accent/10"
             style={{
               backgroundColor: 'var(--navy-mid)',
-              borderColor: 'var(--teal-muted)',
+              borderColor: 'var(--cyan-muted)',
               color: 'var(--offwhite)',
             }}
           >

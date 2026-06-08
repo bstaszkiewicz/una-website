@@ -16,19 +16,19 @@ const areas = [
   {
     icon: Database,
     title: 'Dane',
-    color: 'var(--teal-accent)',
+    color: 'var(--cyan-accent)',
     items: ['Energia elektryczna', 'Gaz', 'Źródła wytwórcze', 'Magazyny i elastyczność', 'Ograniczenia sieciowe'],
   },
   {
     icon: Cog,
     title: 'Procesy',
-    color: 'var(--amber-light)',
+    color: 'var(--lime)',
     items: ['Optymalizacja i sterowanie', 'Rozliczenia (settlement)', 'Kontrola należności'],
   },
   {
     icon: Shield,
     title: 'Wsparcie',
-    color: 'var(--teal-deep)',
+    color: 'var(--cyan-deep)',
     items: ['Raportowanie i audyt', 'Kontrola należności'],
   },
 ];
@@ -104,7 +104,7 @@ export default function OfferingsSection() {
                     document.querySelector('#solution')?.scrollIntoView({ behavior: 'smooth' });
                   }}
                   className="inline-flex items-center gap-3 px-6 py-3 font-medium text-body transition-all duration-300 hover:gap-5"
-                  style={{ backgroundColor: 'var(--amber-light)', color: 'var(--navy-base)' }}
+                  style={{ backgroundColor: 'var(--lime)', color: 'var(--navy-base)' }}
                 >
                   <span>Zobacz rozwiązanie</span>
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -120,10 +120,10 @@ export default function OfferingsSection() {
                   className="p-6 rounded-card"
                   style={{
                     backgroundColor: 'var(--navy-mid)',
-                    borderTop: '2px solid var(--teal-accent)',
+                    borderTop: '2px solid var(--cyan-accent)',
                   }}
                 >
-                  <div className="text-data" style={{ color: 'var(--amber-light)', fontSize: 'clamp(2rem, 5vw, 4rem)' }}>
+                  <div className="text-data" style={{ color: 'var(--lime)', fontSize: 'clamp(2rem, 5vw, 4rem)' }}>
                     {stat.value}
                   </div>
                   <p className="text-body text-offwhite/60 mt-3">{stat.label}</p>
@@ -143,7 +143,7 @@ export default function OfferingsSection() {
               <div className="space-y-4">
                 {modes.map((mode, i) => (
                   <div key={i} className="flex items-start gap-3">
-                    <CheckCircle2 size={18} style={{ color: 'var(--teal-accent)' }} className="mt-1 flex-shrink-0" />
+                    <CheckCircle2 size={18} style={{ color: 'var(--cyan-accent)' }} className="mt-1 flex-shrink-0" />
                     <div>
                       <span className="text-body text-offwhite font-medium">{mode.title}</span>
                       <p className="text-body text-offwhite/50">{mode.desc}</p>
@@ -169,7 +169,7 @@ export default function OfferingsSection() {
                     <ul className="space-y-2">
                       {area.items.map((item, j) => (
                         <li key={j} className="flex items-start gap-2">
-                          <span className="w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0" style={{ backgroundColor: 'var(--teal-accent)' }} />
+                          <span className="w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0" style={{ backgroundColor: 'var(--cyan-accent)' }} />
                           <span className="font-mono text-mono text-offwhite/70">{item}</span>
                         </li>
                       ))}
@@ -191,7 +191,7 @@ export default function OfferingsSection() {
               <ul className="space-y-3">
                 {['Jedna baza danych', 'Automatyczne rozliczenia', 'Raporty zarządcze', 'Kontrola należności'].map((f, i) => (
                   <li key={i} className="flex items-start gap-3">
-                    <CheckCircle2 size={18} style={{ color: 'var(--teal-accent)' }} className="mt-0.5 flex-shrink-0" />
+                    <CheckCircle2 size={18} style={{ color: 'var(--cyan-accent)' }} className="mt-0.5 flex-shrink-0" />
                     <span className="text-body text-offwhite/80">{f}</span>
                   </li>
                 ))}
@@ -220,7 +220,7 @@ export default function OfferingsSection() {
               <ul className="space-y-3">
                 {['Otwarte API', 'Modułowa architektura', 'Brak zmian w istniejących systemach', 'Wdrożenie w tygodnie'].map((f, i) => (
                   <li key={i} className="flex items-start gap-3">
-                    <CheckCircle2 size={18} style={{ color: 'var(--teal-accent)' }} className="mt-0.5 flex-shrink-0" />
+                    <CheckCircle2 size={18} style={{ color: 'var(--cyan-accent)' }} className="mt-0.5 flex-shrink-0" />
                     <span className="text-body text-offwhite/80">{f}</span>
                   </li>
                 ))}
@@ -249,7 +249,7 @@ export default function OfferingsSection() {
               <ul className="space-y-3">
                 {['Predykcja zużycia', 'Optymalizacja PPA', 'Reakcja na ograniczenia OSD', 'Automatyczne alerty'].map((f, i) => (
                   <li key={i} className="flex items-start gap-3">
-                    <CheckCircle2 size={18} style={{ color: 'var(--teal-accent)' }} className="mt-0.5 flex-shrink-0" />
+                    <CheckCircle2 size={18} style={{ color: 'var(--cyan-accent)' }} className="mt-0.5 flex-shrink-0" />
                     <span className="text-body text-offwhite/80">{f}</span>
                   </li>
                 ))}
@@ -268,7 +268,7 @@ export default function OfferingsSection() {
           </div>
         </AccordionItem>
 
-        <div style={{ borderTop: '1px solid rgba(0, 180, 216, 0.12)' }} />
+        <div style={{ borderTop: '1px solid rgba(8, 174, 234, 0.12)' }} />
       </div>
     </section>
   );

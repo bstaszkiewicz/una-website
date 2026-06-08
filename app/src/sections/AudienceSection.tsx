@@ -76,13 +76,13 @@ export default function AudienceSection() {
                 className="audience-animate p-10 rounded-panel transition-all duration-300 hover:-translate-y-1 hover:border"
                 style={{
                   backgroundColor: 'var(--navy-mid)',
-                  borderColor: 'var(--teal-muted)',
+                  borderColor: 'var(--cyan-muted)',
                 }}
               >
                 <Icon
                   size={64}
                   strokeWidth={1}
-                  style={{ color: 'var(--teal-accent)', opacity: 0.6 }}
+                  style={{ color: 'var(--cyan-accent)', opacity: 0.6 }}
                   className="mb-6"
                 />
 
@@ -90,8 +90,8 @@ export default function AudienceSection() {
                   className="inline-block font-mono text-mono px-3 py-1 rounded-pill mb-4"
                   style={{
                     backgroundColor: 'var(--navy-mid)',
-                    border: '1px solid var(--teal-muted)',
-                    color: 'var(--teal-accent)',
+                    border: '1px solid var(--cyan-muted)',
+                    color: 'var(--cyan-accent)',
                   }}
                 >
                   {item.tag}

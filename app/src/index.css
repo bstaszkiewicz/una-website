@@ -41,16 +41,35 @@
     --ring: 45 100% 50%;
     --radius: 0.5rem;
 
-    --navy-base: #14213d;
-    --navy-deep: #0b1320;
-    --navy-mid: #1e3a5f;
-    --teal-accent: #00b4d8;
-    --teal-deep: #0077b6;
-    --teal-muted: rgba(0, 180, 216, 0.15);
-    --amber-light: #ffc300;
-    --amber-deep: #ff9e00;
-    --amber-glow: rgba(255, 195, 0, 0.25);
-    --off-white: #f1faee;
+    /* Navy ramp */
+    --navy-deep: #061D49;
+    --navy-tint: #081E4C;
+    --navy-base: #0A2150;
+    --navy-mid: #16294F;
+
+    /* Cyan accent (replaces teal) */
+    --cyan-accent: #08AEEA;
+    --cyan-deep: #0784B4;
+    --cyan-muted: rgba(8, 174, 234, 0.15);
+    --cyan-faint: rgba(8, 174, 234, 0.08);
+
+    /* Lime / chartreuse (replaces amber) */
+    --lime: #C4DC6A;
+    --lime-deep: #AEC663;
+    --lime-pale: #EBF2C4;
+    --lime-soft: #D8E88C;
+    --lime-glow: rgba(196, 220, 106, 0.25);
+
+    /* Off-white */
+    --off-white: #F7F8F3;
+
+    /* Keep backward-compat aliases so nothing breaks */
+    --teal-accent: var(--cyan-accent);
+    --teal-deep: var(--cyan-deep);
+    --teal-muted: var(--cyan-muted);
+    --amber-light: var(--lime);
+    --amber-deep: var(--lime-deep);
+    --amber-glow: var(--lime-glow);
   }
 
   html {
@@ -67,7 +86,7 @@
   }
 
   * {
-    @apply border-[rgba(0,180,216,0.15)];
+    @apply border-[rgba(8,174,234,0.15)];
   }
 }
 
@@ -95,7 +114,7 @@
     font-weight: 500;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: var(--teal-accent);
+    color: var(--cyan-accent);
   }
 
   .text-gradient-amber {
@@ -133,7 +152,7 @@
 .gradient-border {
   position: relative;
   border-radius: 8px;
-  background: #14213d;
+  background: var(--navy-base);
 }
 
 .gradient-border::before {
@@ -141,7 +160,7 @@
   position: absolute;
   inset: 0;
   padding: 2px;
-  background-image: conic-gradient(from var(--angle), #ffc300, #00b4d8, #0077b6, #ff9e00, #ffc300);
+  background-image: conic-gradient(from var(--angle), var(--lime), var(--cyan-accent), var(--cyan-deep), var(--lime-deep), var(--lime));
   animation: gradient-rotate 6s linear infinite;
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
@@ -222,7 +241,7 @@
   letter-spacing: 1.5rem;
   text-align: center;
   position: absolute;
-  text-shadow: 0 0 20px rgba(255, 195, 0, 0.4);
+  text-shadow: 0 0 20px rgba(196, 220, 106, 0.4);
   z-index: 1;
   line-height: 1.1;
   padding: 0 1rem;
@@ -266,7 +285,7 @@
   position: absolute;
   font-family: 'Inter', sans-serif;
   font-size: clamp(1.5rem, 3vw, 2.5rem);
-  color: rgba(0, 180, 216, 0.2);
+  color: rgba(8, 174, 234, 0.2);
   font-weight: 300;
 }
 
