@@ -1,0 +1,309 @@
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Geist-Variable.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('/fonts/GeistMono-Variable.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 216 43% 8%;
+    --foreground: 138 47% 95%;
+    --card: 213 52% 14%;
+    --card-foreground: 138 47% 95%;
+    --popover: 213 52% 14%;
+    --popover-foreground: 138 47% 95%;
+    --primary: 45 100% 50%;
+    --primary-foreground: 216 43% 8%;
+    --secondary: 195 100% 42%;
+    --secondary-foreground: 138 47% 95%;
+    --muted: 213 52% 14%;
+    --muted-foreground: 138 47% 70%;
+    --accent: 195 100% 42%;
+    --accent-foreground: 138 47% 95%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 195 100% 42% / 0.15;
+    --input: 213 52% 14%;
+    --ring: 45 100% 50%;
+    --radius: 0.5rem;
+
+    --navy-base: #14213d;
+    --navy-deep: #0b1320;
+    --navy-mid: #1e3a5f;
+    --teal-accent: #00b4d8;
+    --teal-deep: #0077b6;
+    --teal-muted: rgba(0, 180, 216, 0.15);
+    --amber-light: #ffc300;
+    --amber-deep: #ff9e00;
+    --amber-glow: rgba(255, 195, 0, 0.25);
+    --off-white: #f1faee;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: var(--navy-base);
+    color: var(--off-white);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  * {
+    @apply border-[rgba(0,180,216,0.15)];
+  }
+}
+
+@layer components {
+  .section-padding {
+    padding-top: clamp(6rem, 12vh, 10rem);
+    padding-bottom: clamp(6rem, 12vh, 10rem);
+  }
+
+  .band-padding {
+    padding-top: clamp(4rem, 8vh, 8rem);
+    padding-bottom: clamp(4rem, 8vh, 8rem);
+  }
+
+  .content-max-width {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .eyebrow {
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--teal-accent);
+  }
+
+  .text-gradient-amber {
+    background: linear-gradient(135deg, var(--amber-light), var(--amber-deep));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Scroll indicator animation */
+@keyframes scrollBounce {
+  0%, 100% { transform: translateY(0); opacity: 1; }
+  50% { transform: translateY(30px); opacity: 0.3; }
+}
+
+/* Gradient border animation */
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes gradient-rotate {
+  0% { --angle: 0deg; }
+  100% { --angle: 360deg; }
+}
+
+.gradient-border {
+  position: relative;
+  border-radius: 8px;
+  background: #14213d;
+}
+
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  padding: 2px;
+  background-image: conic-gradient(from var(--angle), #ffc300, #00b4d8, #0077b6, #ff9e00, #ffc300);
+  animation: gradient-rotate 6s linear infinite;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+/* 3D Tunnel styles */
+.threejs-scene {
+  perspective: 900px;
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.threejs-scene-ring {
+  transform-style: preserve-3d;
+  position: absolute;
+}
+
+.threejs-scene-ring span {
+  display: inline-flex;
+  width: 80px;
+  height: 80px;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 600;
+  color: rgba(241, 250, 238, 0.08);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -40px 0 0 -40px;
+  backface-visibility: hidden;
+  white-space: nowrap;
+}
+
+/* Text compression section */
+.compress-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  perspective: 1000px;
+  overflow: hidden;
+}
+
+.compress-text {
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  font-size: clamp(2rem, 6vw, 5rem);
+  color: #f1faee;
+  text-transform: uppercase;
+  letter-spacing: 1.5rem;
+  text-align: center;
+  transform-style: preserve-3d;
+  position: relative;
+  z-index: 2;
+  line-height: 1.1;
+  padding: 0 1rem;
+}
+
+.compress-text-shadow {
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  font-size: clamp(2rem, 6vw, 5rem);
+  color: transparent;
+  text-transform: uppercase;
+  letter-spacing: 1.5rem;
+  text-align: center;
+  position: absolute;
+  text-shadow: 0 0 20px rgba(255, 195, 0, 0.4);
+  z-index: 1;
+  line-height: 1.1;
+  padding: 0 1rem;
+}
+
+.compress-subtitle {
+  position: absolute;
+  bottom: 15%;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  color: rgba(241, 250, 238, 0.6);
+  text-align: center;
+  width: 100%;
+  opacity: 0;
+  padding: 0 1.5rem;
+  max-width: 600px;
+}
+
+/* Text reveal section */
+.reveal-wrap {
+  display: grid;
+  min-height: 100vh;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  position: relative;
+  background-color: #0b1320;
+  padding: 2rem;
+}
+
+.reveal-text {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: clamp(3rem, 8vw, 7rem);
+  color: #f1faee;
+  text-transform: uppercase;
+  line-height: 0.9;
+}
+
+.reveal-span {
+  position: absolute;
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  color: rgba(0, 180, 216, 0.2);
+  font-weight: 300;
+}
+
+.reveal-span-top {
+  top: 20%;
+  left: 10%;
+}
+
+.reveal-span-bottom {
+  bottom: 20%;
+  right: 10%;
+}
+
+.font-lighter {
+  font-weight: 300;
+}
+
+[data-char] {
+  display: inline-block;
+  white-space: pre;
+}
+
+.word-span {
+  display: inline-block;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .threejs-scene {
+    display: none;
+  }
+}
